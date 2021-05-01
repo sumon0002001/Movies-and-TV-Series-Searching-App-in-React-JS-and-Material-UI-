@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import SingleContent from "../../components/SingleContent/SingleContent";
+import './Trending.css'
 
 const Trending = () => {
   const [content, setContent] = useState([]);
@@ -18,8 +19,8 @@ const Trending = () => {
     }, [])
   return (
     <div>
-      <span className="title">This Trending Page</span>
-      <div>
+      <span className="pageTitle">This Trending Page</span>
+      <div className="trending">
           {content && content.map((c) => 
               < SingleContent 
                 key={c.id}

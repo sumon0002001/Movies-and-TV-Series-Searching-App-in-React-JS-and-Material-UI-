@@ -25,9 +25,11 @@ export default function SimpleBottomNavigation() {
 
 
   useEffect(() => {
-    if (value === 0)
-    history.push('/')
-  }, [value]);
+    if (value === 0) history.push('/')
+    else if (value === 1) history.push('/movies')
+    else if (value === 2) history.push('/series')
+    else if (value === 3) history.push('/search')
+  }, [value, history]);
 
   return (
     <BottomNavigation
